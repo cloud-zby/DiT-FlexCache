@@ -1,0 +1,9 @@
+{"prompt": "portrait of a woman", "ref_dressing": [], "ref_faces": [], "seed": 0}
+{"prompt": "A photograph of a portrait of a woman", "ref_dressing": [], "ref_faces": [], "seed": 0}
+{"prompt": "portrait of a woman", "ref_dressing": [], "ref_faces": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg"], "seed": 0}
+{"prompt": "portrait of a woman", "ref_dressing": [], "ref_faces": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/010.jpeg"], "seed": 0}
+{"prompt": "stand in the desert", "ref_dressing": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg"], "ref_faces": [], "seed": 0}
+{"prompt": "stand in the desert", "ref_dressing": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg"], "ref_faces": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg"], "seed": 0}
+{"prompt": "stand in the desert", "ref_dressing": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg"], "ref_faces": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/010.jpeg"], "seed": 0}
+{"prompt": "stand in the desert", "ref_dressing": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg", "/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/010.jpeg"], "ref_faces": [], "seed": 0, "width": 1024, "height": 576}
+{"prompt": "stand in the desert", "ref_dressing": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg", "/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/010.jpeg"], "ref_faces": ["/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/006.jpeg", "/nvfile-heatstorage/fengzr/projects/UNO-main/assets/danren/010.jpeg"], "seed": 0, "width": 1024, "height": 576}

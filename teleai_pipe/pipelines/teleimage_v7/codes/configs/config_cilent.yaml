@@ -1,0 +1,31 @@
+preprocess: 
+  enable_preprocess: True # 是否开启前处理
+  model_path: '../models/Qwen3-30B-A3B-Instruct-2507'  # 前处理模型 
+
+  use_cilent: True  # 是否使用客户端
+  cilent_base: "http://localhost:11451/v1"
+  served_model_name: Qwen3-30B-A3B-Instruct-2507 #启动silent时候的served-model-name
+  # vllm serve /nvfile-heatstorage/AIGC_H100/zhanghuayu/jiangzj/teleimage_v7/models/Qwen3-30B-A3B-Instruct-2507 --tensor-parallel-size 1 --dtype bfloat16 --gpu-memory-utilization 0.95 --uvicorn-log-level error --port 11451 --max_model_len 94720 --served-model-name  Qwen3-30B-A3B-Instruct-2507
+
+
+  preventTestMode: True # 是否防止测试模式
+  TestBenchmark: # 防测试路径
+    # - "../benchmark/" # dir就遍历所有txt
+    - "../benchmark/doc.txt" # txt就直接读取
+    # - "/nvfile-heatstorage/AIGC_H100/zhanghuayu/jiangzj/teleimage_v7/benchmark/test_benchmark"
+
+tele_image_pipeline: # 默认参数
+  num_inference_steps: 8
+  true_cfg_scale: 1.0
+  seed: 42
+  model_path: "../models/base_model"
+  aspect_ratios: "1:1"
+  lora_model_paths:
+    "../models/lora/lightning.dll.safetensors": 0.6
+    "../models/lora/pytorch_lora_weights.dll.safetensors": 1.0
+
+  
+device:
+  edit_config: 'cuda:0'
+
+# key:LxfQgPiUiXy_fxVUlLlpusLdxdEMQM_ltzY_28kXerM

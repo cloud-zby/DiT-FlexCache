@@ -1,0 +1,45 @@
+# # KVCache配置文件
+# # 用于配置FlexCache的分布式存储后端
+
+# instance_key: lightx2v_flexcache_wan
+# # 贡献到集群池的内存大小（字节）
+# contribute_to_cluster_pool_size:
+#   dram: 10737418240 # 10GB
+
+# # 通信协议配置
+# protocal:
+#   type: tcp
+#   rdma_device_name:
+
+#     # 日志级别
+# log_level: DEBUG
+
+# # UnifyKV配置
+# unifykv_spec:
+#   etcd_addresses: [ 0.0.0.0:2379 ]
+#   cluster_name: unified_test_cluster
+
+
+
+
+
+instance_key: lightx2v_flexcache_wan                     # 唯一标识分布式实例 (str)
+contribute_to_cluster_pool_size:       # 贡献给集群池的大小 (dict(any_not_none))
+  dram: 10737418240                     # - 贡献dram部分 (int(multiple of 16777216))
+protocal:
+  type: tcp                            # 协议类型 ('tcp'|'rdma')
+  rdma_device_name:                    # 用于rdma的设备名 (None|str)
+log_level: INFO                       # 日志级别 ('DEBUG'|'INFO'|'WARNING'|'ERROR')
+
+# specific part, only one of [mooncake_spec,unifykv_spec] is required
+# mooncake_spec:                         # mooncake 特定配置 (dict(optional))
+#   default_address: # ip:port or ip     # 默认rpc通信地址，不通会自动尝试新ip ('{str}:{int}'|None)
+#   local_buffer_size:                   # 本地缓冲区大小 (int(multiple of 16777216))
+#   metadata_server:                     # 元数据服务器地址 ('{str}://{str}:{int}/metadata')
+#   master_server_address:               # 主服务器地址 ('{str}:{int}')
+#   etcd_addresses:                      # etcd地址列表，注意是列表！！ (['{str}:{int}'])
+  
+unifykv_spec:                          # unifykv 特定配置 (dict(optional))
+  etcd_addresses: [10.127.29.225:32379]                     # etcd地址列表，注意是列表！！ (['{str}:{int}'])
+  cluster_name: fluxon_dit_cluster                        # 集群名称 (str)
+  shared_memory_path: /gemini/space/zby/repos/fluxon_deploy/py-kvcache-api-layer/kvcache_api_layer/dit_share_mem                  # 共享内存路径 (str)

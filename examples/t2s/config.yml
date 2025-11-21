@@ -1,0 +1,37 @@
+tf_opt:
+  cond_mode: "text"
+  latent_dim: 384
+  ff_size: 1024
+  num_layers: 8
+  num_heads: 6
+  dropout: 0.2
+  cond_drop_prob: 0.1
+  device: "cuda"
+  clip_dim: 768
+  code_dim: 768
+  num_tokens: 1024
+  clip_version: ""
+
+infer_opt:
+  timesteps: 10
+  cond_scale: 2
+  temperature: 1.0
+  topk_filter_thres: 0.9
+  gsample: false
+  force_mask: false
+
+vae_opt:
+  num_joints: 24
+  window_size: 32
+  fsq_levels: [4, 4, 4, 4, 4]
+  input_emb_width: 48
+  down_t: 1
+  stride_t: 2
+  width: 512
+  c_width: 512
+  depth: 6
+  c_depth: 3
+  dilation_growth_rate: 3
+  activation: "relu"
+  norm: null
+  output_emb_width: 5  # length of fsq_levels

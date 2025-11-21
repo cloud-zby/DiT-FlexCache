@@ -1,0 +1,14 @@
+exclude: ^tests/data/
+repos:
+  - repo: ssh://git@codehub.srdcloud.cn:29418/lizx54/ruff-pre-commit.git
+    rev: f0b5944bef86f50d875305821a0ab0d8c601e465
+    hooks:
+      - id: ruff
+        args:
+          - --fix  # 自动修复代码
+          - --select=E,F  # 选择要检查的规则（E: pycodestyle, F: Flake8）
+          - --ignore=E501,F841,F401,E402,E741,F821,F811,E731,E712  # 忽略某些规则（例如忽略行长度限制）
+          - --line-length=120  # 设置最大行长度
+          - --target-version=py310  # 设置目标 Python 版本
+      - id: ruff-format
+        types_or: [ python, pyi ]

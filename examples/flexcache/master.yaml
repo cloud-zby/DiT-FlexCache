@@ -1,0 +1,5 @@
+etcd_endpoints:
+- "0.0.0.0:2379"
+cluster_name: "unified_test_cluster"
+instance_key: "unified_master"
+port: 50052

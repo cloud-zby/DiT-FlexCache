@@ -1,0 +1,4 @@
+fire
+scikit-learn
+insightface
+onnxruntime

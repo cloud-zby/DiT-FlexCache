@@ -1,0 +1,28 @@
+preprocess: 
+  model_path: '../models/Qwen3-8B-FP8'
+  resize_length: 1280     # 图像与mask统计resize的大小
+
+teleeditpipeline:
+  encryption: True
+  fill_path: '../models/FLUX.1-Fill-dev'
+  dev_path: '../models/FLUX.1-dev'
+  lora_path: '../models/lora/checkpoint-35000'
+  gguf_path: '../models/FLUX.1-Fill-dev/flux1-fill-dev-Q6_K.gguf'
+  control_path: '../models/FLUX.1-dev-Controlnet-Inpainting-Beta'
+
+postprocess:
+  font_path: 'assets/fonts/wqy-microhei.ttc'
+  demo: True
+  max_length: 1920        # 生成图像最大为1920
+
+device:
+  trans_config: 'cuda:0'
+  fill_config: 'cuda:1'
+  control_config: 'cuda:0'
+  transfromer:
+    GPU:
+      - 0
+      - 2
+    MEM:
+      - 4GB
+      - 22GB  

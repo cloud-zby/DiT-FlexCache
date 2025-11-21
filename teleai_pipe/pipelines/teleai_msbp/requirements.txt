@@ -1,0 +1,17 @@
+opencv-python
+pillow
+fire
+tqdm
+loguru
+msgpack
+requests
+ultralytics
+open_clip_torch
+timm
+qwen_vl_utils
+einops
+onnxruntime
+insightface
+scikit-learn
+sentencepiece==0.2.0
+peft==0.15.0

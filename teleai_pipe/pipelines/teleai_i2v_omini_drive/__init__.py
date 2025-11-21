@@ -1,0 +1,14 @@
+from .pipeline_cogvideox_fun import CogVideoXFunPipeline
+from .pipeline_cogvideox_fun_control import CogVideoXFunControlPipeline
+from .pipeline_cogvideox_fun_inpaint import CogVideoXFunInpaintPipeline
+from .pipeline_wan_fun import WanFunPipeline
+from .pipeline_wan_fun_inpaint import WanFunInpaintPipeline
+from .pipeline_wan_fun_control import WanFunControlPipeline
+from .pipeline_wan_fun_control_mo import WanFunControlMoPipeline
+from .pipeline_wan_fun_inpaint_mo import WanFunInpaintMoPipeline
+# from .pipeline_wan_fun_inpaint_audio import WanFunInpaintAudioPipeline
+# from .pipeline_wan_fun_inpaint_sync import WanFunInpaintSyncPipeline
+# from .pipeline_wan_fun_inpaint_sync_ada import WanFunInpaintSyncAdaPipeline
+
+WanPipeline = WanFunPipeline
+WanI2VPipeline = WanFunInpaintPipeline

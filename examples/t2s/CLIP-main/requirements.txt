@@ -1,0 +1,5 @@
+ftfy
+packaging
+regex
+tqdm
+torchvision==0.20.1

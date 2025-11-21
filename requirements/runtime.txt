@@ -1,0 +1,16 @@
+cupy-cuda12x
+transformers==4.48.2
+controlnet-aux==0.0.7
+imageio
+imageio[ffmpeg]
+safetensors
+einops
+sentencepiece
+protobuf
+loguru
+ftfy
+diffusers==0.32.1
+open-clip-torch
+openai
+qwen_vl_utils
+#vllm==0.7.3
