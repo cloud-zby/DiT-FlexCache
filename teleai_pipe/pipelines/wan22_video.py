@@ -9,7 +9,6 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 from loguru import logger
-from teleai_pipe.cache.log import cache_logger
 from typing import Optional, List, Dict
 
 from ..vram_management import (
@@ -37,8 +36,10 @@ from teleai_pipe.distributed.parallel import ParallelModel, shard_model
 
 from ..models.wan_lora import WanLoraWrapper
 from teleai_pipe.utils.profiler import ProfilingContext4Debug
-from teleai_pipe.cache.metrics import CacheMetrics
 
+from teleai_pipe.cache.metrics import CacheMetrics
+from teleai_pipe.cache.log import cache_logger
+from teleai_pipe.cache import FlexCache
 
 class WanVideo22Pipeline(BasePipeline):
     def __init__(
@@ -95,7 +96,7 @@ class WanVideo22Pipeline(BasePipeline):
         self.enable_cache = enable_cache
         # cache
         if enable_cache:
-            from teleai_pipe.cache import FlexCache
+            
 
             if prefer_legacy is None:
                 env_val = os.environ.get("TELEAI_PREFER_LEGACY")

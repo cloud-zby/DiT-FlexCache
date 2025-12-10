@@ -113,8 +113,10 @@ curl -X POST "http://localhost:8000/v1/tasks/" \
        "seed": 42
      }'
 ```
-
-
+或者直接运行
+```bash
+bash examples/teleai_video_v1_3/wan22_14b_text_to_video_prompt_enhance_a800.py
+```
 
 
 
