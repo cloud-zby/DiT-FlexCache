@@ -31,7 +31,18 @@ pip install -v -e .
 ## 安装telefuser
 从共享存储`/gemini/space/zby/repos/teleai_efficient/TeleFuser`进行`cp -r`拷贝
 ```bash
-pip install -e .
+pip install -vv -e .
+```
+或者
+```bash
+git clone https://zhoubingye@code.srdcloud.cn/P24HQASYF0004/AI-Infra/Tele-Fuser
+```
+然后安装
+```bash
+cd Tele-Fuser
+git checkout main
+pip install -vv -e .
+cd ../
 ```
 ## 安装fluxon部署仓库
 https://www.srdcloud.cn/code/50206/repoView/341212/codeFile/tree?key=main
